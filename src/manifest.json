@@ -1,0 +1,16 @@
+{
+  "name": "Nature's_Organic",
+  "short_name": "Nature's_Organic",
+  "theme_color": "#7cca31",
+  "background_color": "#fafafa",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "assets/icons/cannabis-leafs.svg",
+      "sizes": "512x512",
+      "type": "image/svg"
+    }
+  ]
+}

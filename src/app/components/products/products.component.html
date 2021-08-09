@@ -1,0 +1,49 @@
+<section class="after-head top-block-page with-back section-white-text">
+  <div class="overflow-back image-cover mw-100" data-background="assets/images/content/x/top-4.jpg"></div>
+  <div class="overflow-back bg-body-back opacity-80"></div>
+  <div class="content-offs container" style="margin-top: 175px;">
+    <div class="section-top-head with-back">
+      <h1 class="section-title">Shop...</h1>
+      <div class="mt-3">
+        <div class="page-breadcrumbs"><a class="content-link" href="/">Home</a><span class="mx-2">\</span><span>Products</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="grid row">
+      <div class="col-12 col-md-6 col-xl-4 d-flex" *ngFor="let product of products">
+        <article class="entity-block entity-hover-shadow"><a class="entity-preview-show-up entity-preview" href="../product/{{product.category}}/{{product.id}}"><span class="embed-responsive embed-responsive-4by3"><img class="embed-responsive-item" src="{{product.photo}}" alt=""></span><span class="with-back entity-preview-content"><span class="overflow-back bg-body-back opacity-70"></span><span class="m-auto h1 text-theme"><i class="fas fa-shopping-cart"></i></span></span></a>
+          <div class="fill-color-line" data-role="fill-line">
+            <div class="opacity-30 fill-line-segment bg-theme" data-role="fill-line-segment" data-min-width="10" data-preffered-width="50" data-max-width="80"></div>
+            <div class="opacity-60 fill-line-segment bg-theme" data-role="fill-line-segment" data-min-width="10" data-preffered-width="50" data-max-width="80"></div>
+            <div class="fill-line-segment bg-theme" data-role="fill-line-segment" data-min-width="10" data-preffered-width="50" data-max-width="80"></div>
+          </div>
+          <div class="entity-content">
+            <h4 class="entity-title"><a class="content-link" href="../product/{{product.category}}/{{product.id}}">{{product.name}}</a></h4>
+            <p class="mb-0 entity-text">{{product.description1.substr(0, 140)}}...</p>
+
+            <div class="entity-bottom-line">
+              <div class="entity-price"><span class="currency">$</span>{{product.prices[0].amount}} <span class="price-unit">/ {{product.prices[0].unit}}</span></div>
+              <div class="entity-price"><span class="currency">{{product.thc}}</span> <span class="price-unit"></span></div>
+              <div class="entity-action-btns"><a class="btn-sm btn btn-theme" href="../product/{{product.category}}/{{product.id}}">add to cart</a></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  <div class="section-footer">
+    <div class="paginator">
+      <a class="paginator-nav" *ngIf="currentPage == 1" aria-disabled="true"><i class="fas fa-arrow-left"></i></a>
+      <a class="paginator-nav" *ngIf="currentPage != 1" href='../../../products/page/{{currentPage-1}}' aria-disabled="currentPage == 1"><i class="fas fa-arrow-left"></i></a>
+      <span class="paginator-item" *ngFor="let page of getPagesArray()">
+        <a *ngIf="page == currentPage" class="active paginator-item">{{page}}</a>
+        <a class="paginator-item" href='../../../products/page/{{page}}' *ngIf="page != currentPage">{{page}}</a>
+      </span>
+      <a class="paginator-nav" *ngIf="currentPage == numberPages"><i class="fas fa-arrow-right"></i></a>
+      <a class="paginator-nav" *ngIf="currentPage != numberPages" href='../../../products/page/{{currentPage--1}}'><i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,103 @@
+<section class="after-head top-block-page with-back section-white-text">
+  <div class="overflow-back image-cover mw-100" data-background="assets/images/content/x/top-4.jpg"></div>
+  <div class="overflow-back bg-body-back opacity-80"></div>
+  <div class="content-offs container" style="margin-top: 175px;">
+      <div class="section-top-head with-back">
+          <h1 class="section-title">Shopping Cart</h1>
+          <div class="mt-3">
+              <div class="page-breadcrumbs"><a class="content-link" href="/">Home</a><span class="mx-2">\</span><a class="content-link" href="/products">Shop</a><span class="mx-2">\</span><span>Cart</span></div>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="mb-0 section">
+  <form class="container" action="#" method="POST">
+      <div class="cart-items">
+          <div class="cart-header">
+              <h2 class="cart-title">Products in Your Cart</h2>
+              <div class="cart-item-title">Product</div>
+              <div class="cart-item-quantity">Quantity</div>
+              <div class="cart-item-price">Price</div>
+              <div class="cart-item-total">Total</div>
+              <div class="cart-item-remove"></div>
+          </div>
+          <div class="cart-item-entity" *ngFor="let item of items">
+              <div class="cart-item-image"><a class="entity-preview-show-up entity-preview" href="../product/{{item.product.id}}"><span class="embed-responsive embed-responsive-4by3"><img class="embed-responsive-item" src="{{item.product.photo}}" alt=""></span><span class="with-back entity-preview-content"><span class="h3 m-auto text-theme"><i class="fas fa-search"></i></span><span class="overflow-back bg-dark opacity-70"></span></span></a></div>
+              <div class="cart-item-title"><a class="content-link" href="../product/{{item.product.id}}">{{item.product.name}}</a></div>
+              <div class="cart-item-quantity">
+                <div class="input-view-flat input-gray-shadow input-spin input-group">
+                    <ul *ngIf="item.quantities.length > 1">
+                        <li  *ngFor="let quant of item.quantities">{{quant.quantity}} x {{quant.unit}}</li>
+                      </ul>
+                      <ul *ngIf="item.quantities.length == 1">
+                        <li *ngFor="let quant of item.quantities"> {{quant.quantity}} x {{quant.unit}}</li>
+                      </ul>
+                </div>
+              </div>
+              <div class="cart-item-price">
+                <ul class="cart-item-price" *ngIf="item.quantities.length > 1">
+                    <li *ngFor="let quantity of item.quantities" >
+                      <a (click)="deleteUnit(quantity, item)" class="cart-item-remove" aria-label="Remove this item" data-product_id="73" data-product_sku="" style="cursor: pointer;"><strong>X</strong></a>
+                      $ {{getPrice(item.product, quantity.unit)}}
+                    </li>
+                  </ul>
+                  <ul class="amount" *ngIf="item.quantities.length == 1">
+                    <li *ngFor="let quantity of item.quantities">
+                      $ {{getPrice(item.product, quantity.unit)}}</li>
+                  </ul>
+              </div>
+              
+              <div class="cart-item-total"><span class="cart-item-total-text">Item total:</span>{{itemTotal(item)}}</div>
+              <div class="cart-item-remove"><a (click)="delete(item)"><span class="cart-item-remove-text">remove from cart</span><i class="fas fa-times"></i></a></div>
+          </div>
+          
+          <div class="separator-line"></div>
+          <div class="cart-footer">
+              <div class="grid-sm row">
+                  <!-- <div class="col-sm-6 col-md-4 col-lg-3"><button class="btn btn-theme-bordered" type="submit">clear shopping cart</button></div>
+                  <div class="col-sm-6 col-md-4 col-lg-3 mr-auto"><button class="btn btn-theme-bordered" type="submit">update shopping cart</button></div> -->
+                  <div class="col-md-4 col-lg-3"><a class="btn btn-theme" href="/products">continue shopping</a></div>
+              </div>
+          </div>
+      </div>
+      <div class="section-block">
+          <div class="cols-xl row">
+              <!-- <div class="col-lg-6 mr-auto">
+                  <div class="cart-form">
+                      <h5 class="form-title">Coupon Discount</h5>
+                      <form autocomplete="off">
+                          <div class="row grid">
+                              <div class="col-12 col-sm-7">
+                                  <div class="input-view-flat input-gray-shadow input-group"><input class="form-control" name="text" type="text" placeholder="Enter Your Coupon Code Here!" required="required"></div>
+                              </div>
+                              <div class="col-12 col-sm-5"><button class="w-100 btn btn-theme-bordered" type="submit">apply coupon</button></div>
+                          </div>
+                      </form>
+                  </div>
+                  <div class="cart-form">
+                      <h5 class="form-title">Check Availability</h5>
+                      <form autocomplete="off">
+                          <div class="row grid">
+                              <div class="col-12 col-sm-7">
+                                  <div class="input-view-flat input-gray-shadow input-group"><input class="form-control" name="text" type="text" placeholder="Enter Pin Code" required="required"></div>
+                              </div>
+                              <div class="col-12 col-sm-5"><button class="w-100 btn btn-theme-bordered" type="submit">check</button></div>
+                          </div>
+                      </form>
+                  </div>
+              </div> -->
+              <div class="col-auto mx-auto mx-lg-0">
+                  <div class="cart-block">
+                      <ul class="cart-totals list-titled">
+                          <li><span class="list-item-title">Sub Total</span><span class="list-item-value">${{total()}}</span></li>
+                          <li><span class="list-item-title">Shipping</span><span class="list-item-value">Please Contact US</span></li>
+                          <li class="separator-line"></li>
+                          <li class="cart-total"><span class="list-item-title">Total</span><span class="list-item-value">${{total()}}</span></li>
+                      </ul>
+                      <form action="#" method="POST"><a class="w-100 btn btn-theme" href="/checkout">proceed to checkout</a></form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </form>
+</section>

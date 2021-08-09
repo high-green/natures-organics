@@ -1,0 +1,135 @@
+<section class="after-head top-block-page with-back section-white-text">
+  <div class="overflow-back image-cover mw-100" data-background="assets/images/content/x/top-4.jpg"></div>
+  <div class="overflow-back bg-body-back opacity-80"></div>
+  <div class="content-offs container" style="margin-top: 175px;">
+    <div class="section-top-head with-back">
+      <h1 class="section-title">{{product.name}}</h1>
+      <div class="mt-3">
+        <div class="page-breadcrumbs"><a class="content-link" href="/">Home</a><span class="mx-2">\</span><a class="content-link" href="../category/{{product.category}}">{{product.category}}</a><span class="mx-2">\</span><span>{{product.name}}</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <div class="sidebar-container">
+    <div class="content">
+      <section class="section">
+        <div class="entity">
+          <div class="grid row">
+            <div class="col-md-6">
+              <div class="entity-image"><img class="w-100" src="{{product.photo}}" alt=""></div>
+            </div>
+            <div class="col">
+              <h2 class="mb-2 entity-title">{{product.name}}</h2>
+              <div class="user-rating mb-1" *ngIf="product.stars == 5">
+                <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+              </div>
+              <div class="user-rating mb-1" *ngIf="product.stars == 4">
+                <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                <span class="rating-item rating-inactive"><i class="fas fa-cannabis"></i></span>
+              </div>
+              <div class="user-rating mb-1" *ngIf="product.stars == 3">
+                <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                <span class="rating-item rating-inactive"><i class="fas fa-cannabis"></i></span>
+                <span class="rating-item rating-inactive"><i class="fas fa-cannabis"></i></span>
+              </div>
+              <div class="mb-3 entity-price" *ngFor="let price of product.prices">
+                <span class="entity-price-current" *ngIf="price.unit == chosenUnit">${{price.amount}}</span>
+                <span class="entity-price-old" *ngIf="price.unit == chosenUnit">${{price.amount + 10}}</span>
+                <span class="entity-price-current" *ngIf="price.unit == chosenUnit"> / {{price.unit}}</span>
+              </div>
+              <div class="entity-action-btns">
+                <form autocomplete="off">
+                  <div class="row grid">
+                    <div class="col-auto">
+                      <div class="input-view-flat input-gray-shadow input-spin input-group">
+                        <input class="form-control" min="1" name="text" type="text" value="1" [(ngModel)]="quant" (keyup)="onQuantityChange($event.target.value)">
+                        <span class="input-actions"><span class="input-decrement" (click)="reduceQuant()"><i class="fas fa-minus"></i></span>
+                          <span class="input-increment" (click)="addQuant()"><i class="fas fa-plus"></i></span></span>
+                      </div>
+                    </div>
+                    <div class="col-auto"><button class="btn btn-theme" type="submit" (click)="addToCart()">add to cart</button></div>
+                  </div>
+                  <div class="row grid">
+                    <div class="col-auto">
+                      <p>Select Option</p>
+                      <select class="btn btn-theme" [(ngModel)]="chosenUnit" name="chosenUnit" style="width: 160px">
+                        <option *ngFor="let price of product.prices" [value]="price.unit">{{price.unit}}</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <ul class="mt-4 entity-list">
+                <li><span class="entity-list-title">{{product.thc}}</span><span class="entity-list-value"></span></li>
+                <li><span class="entity-list-title">Categories:</span><span class="entity-list-value"><span class="entity-categories"><a href="/products">oil</a>, <a href="/products">concentrate</a></span></span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mb-4 entity-body">
+            <p>{{product.description1}}</p>
+          </div>
+          <p class="entity-details-list">
+            {{product.description2}}
+          </p>
+          <div class="entity-footer">
+            <div class="separator-line mb-3"></div>
+            <div class="entity-action-icons">
+              <div class="entity-actions-title">Share:</div><a class="content-link" href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i> </a><a class="content-link" href="#"><i class="fab fa-twitter" aria-hidden="true"></i> </a><a class="content-link" href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i> </a><a class="content-link" href="#"><i class="fab fa-pinterest" aria-hidden="true"></i> </a><a class="content-link" href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="sidebar section order-lg-last">
+      <section class="section-sidebar">
+        <div class="mb-4 section-head">
+          <h3 class="section-title h4"><span class="section-mark"></span><span>Top products</span></h3>
+        </div>
+        <div class="grid row">
+          <div class="col-md-6 col-lg-12" *ngFor="let product of products">
+            <article class="entity">
+              <div class="grid-sm row">
+                <div class="col-sm-5"><a class="entity-preview-show-up entity-preview" href="../product/{{product.id}}"><span class="embed-responsive embed-responsive-6by4"><img class="embed-responsive-item" src="{{product.photo}}" alt=""></span><span class="with-back entity-preview-content"><span class="h3 m-auto text-theme"><i class="fas fa-search"></i></span><span class="overflow-back bg-dark opacity-70"></span></span></a></div>
+                <div class="col">
+                  <h4 class="h5 mb-1 entity-title"><a class="content-link" href="../product/{{product.id}}">{{product.name}}</a></h4>
+                  <div class="user-rating" *ngIf="product.stars == 5">
+                    <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                    <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                    <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                    <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                    <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                  </div>
+                  <div class="user-rating" *ngIf="product.stars == 4">
+                    <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                    <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                    <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                    <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                    <span class="rating-item rating-inactive"><i class="fas fa-cannabis"></i></span>
+                  </div>
+                  <div class="user-rating" *ngIf="product.stars == 3">
+                    <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                    <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                    <span class="rating-item"><i class="fas fa-cannabis"></i></span>
+                    <span class="rating-item rating-inactive"><i class="fas fa-cannabis"></i></span>
+                    <span class="rating-item rating-inactive"><i class="fas fa-cannabis"></i></span>
+                  </div>
+                  <div class="entity-price"><span class="currency">$</span>{{product.prices[0].amount}} / {{product.prices[0].unit}}</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<section class="after-head top-block-page with-back section-white-text">
+  <div class="overflow-back image-cover mw-100" data-background="assets/images/content/x/top-2.jpg"></div>
+  <div class="overflow-back bg-body-back opacity-80"></div>
+  <div class="content-offs container" style="margin-top: 175px;">
+      <div class="section-top-head with-back">
+          <h1 class="section-title">Contact Us</h1>
+          <div class="mt-3">
+              <div class="page-breadcrumbs"><a class="content-link" href="/">Home</a><span class="mx-2">\</span><span>Contact Us</span></div>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="section-solid">
+  <div class="overflow-back">
+      <div class="container h-100 position-relative">
+          <div class="c-vape-side"><span class="svg-content svg-fill-theme" data-svg="assets/images/svg/cannabis.svg"></span></div>
+      </div>
+  </div>
+  <div class="section-head">
+      <div class="separator-double"></div>
+      <h2 class="section-title">We Want to Hear from You</h2>
+  </div>
+  <div class="container">
+      <form #contactForm="ngForm" (ngSubmit)="submit()">
+          <div class="row grid justify-content-center">
+              <div class="col-12 col-sm-6 col-lg-5 col-xl-4">
+                  <div class="input-view-flat input-gray-shadow form-group"><label class="required">Your Name</label>
+                      <div class="input-group"><input class="form-control" name="name" type="text" placeholder="Name" required="required" [(ngModel)]="contact.firstName"></div>
+                  </div>
+              </div>
+              
+              <div class="col-12 col-sm-6 col-lg-5 col-xl-4">
+                  <div class="input-view-flat input-gray-shadow form-group"><label class="required">Your Email</label>
+                      <div class="input-group"><input class="form-control" name="email" type="email" placeholder="Email" required="required" [(ngModel)]="contact.email"></div>
+                  </div>
+              </div>
+              
+              <div class="col-12 col-lg-10 col-xl-8">
+                  <div class="input-view-flat input-gray-shadow form-group"><label class="required">Your Message</label>
+                      <div class="input-group"><textarea class="form-control" name="message" placeholder="Message" [(ngModel)]="contact.message"></textarea></div>
+                  </div>
+              </div>
+              <div class="col-12 text-center"><button class="btn-wide mb-0 btn btn-theme" type="submit">{{buttonMsg}}</button></div>
+          </div>
+      </form>
+  </div>
+</section>
+<section class="section">
+  <!-- <div class="section-map">
+      <div class="gmap" data-lat="-33.88" data-lng="151.108" data-center-lat="-33.8825"></div>
+  </div> -->
+  <div class="section-map-container container">
+      <div class="text-center grid row">
+          <div class="col-md-4">
+              <h4 class="entity-title">Address</h4>
+              <p class="mb-0 entity-subtext">Denver, CO 80022, United states</p>
+          </div>
+          <div class="col-md-4">
+              <h4 class="entity-title">Email</h4>
+              <p class="mb-0 entity-subtext"><a href="mailto:infos@naturesorganics.com">infos@naturesorganics.com</a></p>
+          </div>
+          <div class="col-md-4">
+              <h4 class="entity-title">Support</h4>
+              <p class="mb-0 entity-subtext">+1 (720) 663-0384</p>
+          </div>
+      </div>
+  </div>
+</section>

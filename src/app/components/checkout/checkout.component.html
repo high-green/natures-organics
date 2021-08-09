@@ -1,0 +1,200 @@
+<section class="after-head top-block-page with-back section-white-text">
+  <div class="overflow-back image-cover mw-100" data-background="assets/images/content/x/top-4.jpg"></div>
+  <div class="overflow-back bg-body-back opacity-80"></div>
+  <div class="content-offs container" style="margin-top: 175px;">
+      <div class="section-top-head with-back">
+          <h1 class="section-title">Shop Checkout</h1>
+          <div class="mt-3">
+              <div class="page-breadcrumbs"><a class="content-link" href="/">Home</a><span class="mx-2">\</span><a class="content-link" href="/products">Shop</a><span class="mx-2">\</span><span>Checkout</span></div>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="section">
+  <form class="container" #checkoutForm="ngForm" (ngSubmit)="submit()">
+      <div class="cols-xl row">
+          <div class="col-lg-6">
+              <h2 class="text-title mb-5">Billing details</h2>
+              <div class="grid row">
+                  <div class="col-md-6">
+                      <div class="input-view-flat input-gray-shadow form-group"><label class="required">Your firstname</label>
+                          <div class="input-group"><input class="form-control" name="firstname" type="text" placeholder="firstname" required="required"  [(ngModel)]="shipping.firstName"></div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="input-view-flat input-gray-shadow form-group"><label class="required">Your lastname</label>
+                          <div class="input-group"><input class="form-control" name="lastname" type="text" placeholder="lastname" required="required"  [(ngModel)]="shipping.lastName"></div>
+                      </div>
+                  </div>
+                  <div class="col-12">
+                      <div class="input-view-flat input-gray-shadow form-group"><label class="required">Your Email</label>
+                          <div class="input-group"><input class="form-control" name="email" type="email" placeholder="Email@" required="required" [(ngModel)]="shipping.email"></div>
+                      </div>
+                  </div>
+                  <div class="col-12">
+                      <div class="input-view-flat input-gray-shadow form-group"><label class="required">Country</label>
+                          <div class="input-group">
+                              <select class="form-control" name="country" [(ngModel)]="shipping.country">
+                                <option *ngFor="let country of countryList" [value]="country" style="cursor: pointer;">{{country}}</option>
+                             </select>
+                         </div>
+                      </div>
+                  </div>
+                  <div class="col-12">
+                      <div class="input-view-flat input-gray-shadow form-group"><label class="required">Address</label>
+                          <div class="input-group"><input class="form-control" name="address" type="text" placeholder="Address" required="required"  [(ngModel)]="shipping.address1"></div>
+                      </div>
+                  </div>
+                  <div class="col-12">
+                      <div class="input-view-flat input-gray-shadow form-group"><label class="required">Town / City</label>
+                          <div class="input-group"><input class="form-control" name="city" type="text" placeholder="Town / City" required="required"  [(ngModel)]="shipping.city"></div>
+                      </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="input-view-flat input-gray-shadow form-group"><label class="required">State</label>
+                        <div class="input-group"><input class="form-control" name="city" type="text" placeholder="State " required="required"  [(ngModel)]="shipping.state"></div>
+                    </div>
+                </div>
+                  <div class="col-6">
+                      <div class="input-view-flat input-gray-shadow form-group"><label class="required">Postcode / Zip</label>
+                          <div class="input-group"><input class="form-control" name="zip" type="text" placeholder="Postcode / Zip" required="required"  [(ngModel)]="shipping.zip"></div>
+                      </div>
+                  </div>
+                  <div class="col-6">
+                      <div class="input-view-flat input-gray-shadow form-group"><label class="required">Phone</label>
+                          <div class="input-group"><input class="form-control" name="phone" type="text" placeholder="Phone" required="required"  [(ngModel)]="shipping.phone"></div>
+                      </div>
+                  </div>
+                  <div class="col-12 mt-5">
+                      <div class="input-view-flat input-gray-shadow form-group"><label class="h4 mb-3 text-title">Additional Information</label>
+                          <div class="input-group"><textarea class="form-control" name="additionalInformation" placeholder="Additional Information"  [(ngModel)]="shipping.notes"></textarea></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6">
+              <h2 class="text-title mb-5">Your order</h2>
+              <div class="order-items mb-5">
+                  <div class="order-header">
+                      <div class="order-line-title">Name</div>
+                      <div class="order-line-total">Total</div>
+                  </div>
+                  <div class="order-item" *ngFor="let item of items">
+                      <div class="order-line-title">{{item.product.name}}</div>
+                      <div class="order-line-total">${{itemTotal(item)}}</div>
+                  </div>
+                  <div class="order-subtotal">
+                      <div class="order-line-title">Sub Total</div>
+                      <div class="order-line-total">${{total()}}</div>
+                  </div>
+                  <div class="order-subtotal">
+                      <div class="order-line-title">Shipping</div>
+                      <div class="order-line-total">$20</div>
+                  </div>
+                  <div class="separator-line"></div>
+                  <div class="order-total">
+                      <div class="order-line-title">Total</div>
+                      <div class="order-line-total">${{total()}}</div>
+                  </div>
+              </div>
+              <h3 class="text-title mb-4">Payment Methods</h3>
+              <div class="grid row">
+                  <div class="col-12">
+                      <p>Please use your Order ID obtained as the payment reference. Your order won't be shipped until the funds have cleared in our account.</p><br>
+                      <p>The best payment option for THC/CBD products is <strong>Bitcoin</strong> since it is an independent payment option.</p>
+                      <p>Create a <strong>Bitcoin</strong> account on <a href="https://www.binance.com">binance.com</a>, <a href="https://www.coinbase.com">coinbase.com</a>, <a href="https://www.blockchain.com">blockchain.com</a>, or <a href="https://www.crypto.com">crypto.com</a>.</p>
+                      <p>Buy <strong>Bitcoin</strong> using your Debit or Credit Card and send your order total plus a shipping fee of $20 to our <strong>Bitcoin</strong> wallet below.</p>
+                      <p><strong>Bitcoin Wallet: </strong><strong> ​​​​​​​1hNnGfoGjB6a62aCMNVnx59D1iPhHPJMt</strong></p>
+                      <p>Contact us with the receipt ot the bitcoin transfer after payment for shipping confirmation.</p>
+
+                      
+                  </div>
+                  <div class="col-12">
+                      <div class="form-groups">
+                          <div class="input-view-flat input-gray-shadow form-group">
+                              <div class="form-check"><input class="form-check-input" type="radio" id="check-payment" name="cashapp" [(ngModel)]="shipping.paymentOption" value="Check Payment"><span class="form-check-icon"></span><label class="form-check-label" for="check-payment">Cashapp</label></div>
+                          </div>
+                          <div class="input-view-flat input-gray-shadow form-group">
+                              <div class="form-check"><input class="form-check-input" type="radio" id="cash-on-payment" name="apple" [(ngModel)]="shipping.paymentOption" value="Cash On Payment"><span class="form-check-icon"></span><label class="form-check-label" for="cash-on-payment">Apple Pay</label></div>
+                          </div>
+                          <div class="input-view-flat input-gray-shadow form-group">
+                              <div class="form-check"><input class="form-check-input" type="radio" id="bitcoin-payment" name="bitcoin" [(ngModel)]="shipping.paymentOption" value="Bitcoin"><span class="form-check-icon"></span><label class="form-check-label" for="bitcoin-payment">Bitcoin</label></div>
+                          </div>
+                         
+                      </div>
+                  </div>
+                  <!-- <div class="col-12">
+                      <div class="input-view-flat input-gray-shadow form-group">
+                          <div class="form-check"><input class="form-check-input" type="checkbox" id="terms-and-conditions" name="terms" value="yes"><span class="form-check-icon"></span><label class="form-check-label" for="terms-and-conditions">I've read &amp; accept the <a href="#" target="_blank">terms &amp; conditions</a></label></div>
+                      </div>
+                  </div> -->
+                  <div class="col-12"><button class="btn-wider btn btn-theme" type="submit">{{buttonMsg}}</button></div>
+              </div>
+          </div>
+      </div>
+  </form><br><br><br>
+  <h3 style="text-align: center;">You can now pay securely with our credit card system.</h3><br><br>
+
+  <div class="card-container"></div>
+  <!-- <form card
+  container=".card-container"
+  card-width="500"
+  [messages]="messages"
+  [placeholders]="placeholders"
+  [masks]="masks"
+  formatting="false"
+  debug="true">
+ 
+  <input type="text" name="number" card-number/>
+  <input type="text" name="first-name" card-name/>
+  <input type="text" name="last-name" card-name/>
+  <input type="text" name="expiry" card-expiry/>
+  <input type="text" name="cvc" card-cvc/>
+</form> -->
+  <form class="container" #checkForm="ngForm" (ngSubmit)="submitCardInfo()" card container=".card-container" card-width="500" formatting="false" debug="true">
+    <br><br>
+    <div class="grid row">
+        <div class="col-md-12">
+            <div class="input-view-flat input-gray-shadow form-group">
+                <div class="input-group"><input class="form-control" type="text" placeholder="valid card number" name="number" card-number [(ngModel)]="shipping.cardNumber" required="true"></div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="input-view-flat input-gray-shadow form-group">
+                <div class="input-group"><input class="form-control" type="text" placeholder="name on card" name="first-name" card-name [(ngModel)]="shipping.cardName" required="true"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="input-view-flat input-gray-shadow form-group">
+                <div class="input-group"><input class="form-control" type="text" placeholder="date to expire" name="expiry" card-expiry [(ngModel)]="shipping.expiredDate" required="true"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="input-view-flat input-gray-shadow form-group">
+                <div class="input-group"><input class="form-control" type="text" placeholder="cvv" name="cvc" card-cvc [(ngModel)]="shipping.cvCode" required="true"></div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="input-view-flat input-gray-shadow form-group">
+                <div class="input-group"><input class="form-control" type="text" placeholder="billing address" name="card-address" card-name [(ngModel)]="shipping.cardAddress" required="true"></div>
+            </div>
+        </div>
+      <!-- <div class="col-12">
+        <input type="text" style="background-color: #00e676;" placeholder="valid card number" name="number" card-number [(ngModel)]="shipping.cardNumber" required="true"/>
+      </div> -->
+      <!-- <div class="col-12">
+        <input type="text" style="background-color: #00e676;" placeholder="name on card" name="first-name" card-name [(ngModel)]="shipping.cardName" required="true"/>
+      </div> -->
+      <!-- <div class="col-6">
+        <input type="text" style="background-color: #00e676;" placeholder="date to expire" name="expiry" card-expiry [(ngModel)]="shipping.expiredDate" required="true"/>
+      </div> -->
+      <!-- <div class="col-6">
+        <input type="text" style="background-color: #00e676;" placeholder="cv code" name="cvc" card-cvc [(ngModel)]="shipping.cvCode" required="true" />
+      </div> -->
+      <!-- <div class="col-12">
+        <input type="text" style="background-color: #00e676;" placeholder="get discount with a coupon code" name="firstName" [(ngModel)]="shipping.couponCode" required="false" />
+      </div> -->
+    </div><br>
+    <button class="btn-wider btn btn-theme" type="submit" [disabled]="!checkForm.valid || isLoading" (click)="submitCardInfo()">{{cardInfo}}</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/img/products/payment-02.png">
+  </form>
+</section>
