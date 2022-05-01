@@ -1,24 +1,26 @@
 <header class="header-white-color header-horizontal header-over header-view-side">
-    <div class="container">
-        <nav class="navbar">
-            <a class="navbar-brand " href="/">
-                <span class="svg-content svg-fill-theme" data-svg="assets/images/svg/logo-7.svg"></span>
+  <div class="container">
+    <nav class="navbar">
+      <a class="navbar-brand " href="/">
+        <span class="svg-content svg-fill-theme" data-svg="assets/images/svg/logo-7.svg"></span>
 
-                <!-- <span class="logo-element">
+        <!-- <span class="logo-element">
                     <span class="logo-icon">
                         <span class="logo-text" style="margin-top: 0em; padding-top: 0em; font-size: 20px;">Nature's</span>
                         <span class="svg-content svg-fill-theme" data-svg="assets/images/svg/logo-2.svg"></span>
                     </span>
                     <span class="logo-text" style="margin-bottom: 2px;">Organics</span>
                 </span> -->
-            </a>
-            <button class="navbar-toggler" type="button"><i class="fas fa-bars nav-show"></i><i class="fas fa-times nav-hide"></i></button>
-            <div class="navbar-collapse">
-                <div class="container">
-                    <ul class="navbar-nav">
-                        <li class="nav-item nav-item-arrow-down nav-hover-show-sub"><a class="nav-link" href="/">Home<span class="nav-arrow"></span></a>
-                        </li>
-                        <!-- <li class="nav-item nav-item-arrow-down nav-hover-show-sub"><a class="nav-link" href="#" data-role="nav-toggler">Pages<span class="nav-arrow"><i class="fas fa-chevron-down"></i></span></a>
+      </a>
+      <button class="navbar-toggler" type="button"><i class="fas fa-bars nav-show"></i><i
+          class="fas fa-times nav-hide"></i></button>
+      <div class="navbar-collapse">
+        <div class="container">
+          <ul class="navbar-nav">
+            <li class="nav-item nav-item-arrow-down nav-hover-show-sub"><a class="nav-link" href="/">Home<span
+                  class="nav-arrow"></span></a>
+            </li>
+            <!-- <li class="nav-item nav-item-arrow-down nav-hover-show-sub"><a class="nav-link" href="#" data-role="nav-toggler">Pages<span class="nav-arrow"><i class="fas fa-chevron-down"></i></span></a>
                             <ul class="collapse nav">
                                 <li class="nav-item nav-item-arrow-down nav-hover-show-sub"><a class="nav-link" href="#" data-role="nav-toggler">About Us<span class="nav-arrow"><i class="fas fa-chevron-down"></i></span></a>
                                     <ul class="collapse nav">
@@ -111,31 +113,36 @@
                                 </li>
                             </ul>
                         </li> -->
-                        <li class="nav-item"><a class="nav-link" href="/category/seed">Seeds</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/category/strain">Strains</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/category/concentrate">Concentrates</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/category/vape">Vapes</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link" href="/reviews">Testimonials</a></li> -->
-                    </ul>
-                    <div class="navbar-extra">
-                        <ul class="actions-nav">
-                            <form #ngSearch="ngForm" (ngSubmit)="search()">
-                                <div class="input-view-flat input-gray-shadow form-group">
-                                    <div class="input-group">
-                                        <input class="form-control" name="search" type="text" placeholder="Keywords" [(ngModel)]="searchString" required="required">
-                                    </div>
-                                </div>
-                            </form>
-                            <li class="nav-item"><a class="nav-link" href="/cart"><i class="fas fa-shopping-bag"></i><span class="navbar-mobile">&nbsp;&nbsp;Cart</span><span class="cart-quantity"><span class="badge badge-pill badge-warning">{{cartNumber}}</span></span></a></li>
-                            <li class="nav-item"><a class="nav-link" href="/checkout"><i class="fas fa-shopping-bag"></i><span class="navbar-mobile">&nbsp;&nbsp;Checkout</span><span class="cart-quantity"><span class="badge badge-pill badge-warning">${{total}}</span></span></a></li>
-                        </ul>
-                        <div class="navbar-info">
-                            <div class="navbar-info-title">Call Us Now</div>
-                            <div class="navbar-info-value"><a href='tel:+19702383097'>+1 (970) 238-3097</a></div>
-                        </div>
-                    </div>
+            <li class="nav-item"><a class="nav-link" href="/category/seed">Seeds</a></li>
+            <li class="nav-item"><a class="nav-link" href="/category/strain">Strains</a></li>
+            <li class="nav-item"><a class="nav-link" href="/category/concentrate">Concentrates</a></li>
+            <li class="nav-item"><a class="nav-link" href="/category/vape">Vapes</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="/reviews">Testimonials</a></li> -->
+          </ul>
+          <div class="navbar-extra">
+            <ul class="actions-nav">
+              <form #ngSearch="ngForm" (ngSubmit)="search()">
+                <div class="input-view-flat input-gray-shadow form-group">
+                  <div class="input-group">
+                    <input class="form-control" name="search" type="text" placeholder="Keywords"
+                      [(ngModel)]="searchString" required="required">
+                  </div>
                 </div>
+              </form>
+              <li class="nav-item"><a class="nav-link" href="/cart"><i class="fas fa-shopping-bag"></i><span
+                    class="navbar-mobile">&nbsp;&nbsp;Cart</span><span class="cart-quantity"><span
+                      class="badge badge-pill badge-warning">{{cartNumber}}</span></span></a></li>
+              <li class="nav-item"><a class="nav-link" href="/checkout"><i class="fas fa-shopping-bag"></i><span
+                    class="navbar-mobile">&nbsp;&nbsp;Checkout</span><span class="cart-quantity"><span
+                      class="badge badge-pill badge-warning">${{total}}</span></span></a></li>
+            </ul>
+            <div class="navbar-info">
+              <div class="navbar-info-title">Call Us Now</div>
+              <div class="navbar-info-value"><a href='tel:+17192150238'>+1 (719) 215-0238</a></div>
             </div>
-        </nav>
-    </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
 </header>
