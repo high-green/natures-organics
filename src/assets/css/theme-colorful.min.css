@@ -2315,7 +2315,8 @@ textarea.form-control {
   border-radius: 3rem !important;
 }
 
-.input-spin .form-control:[disabled]~.input-actions .input-decrement, .input-spin .form-control:[disabled]~.input-actions .input-increment {
+.input-spin .form-control:disabled ~ .input-actions .input-decrement,
+.input-spin .form-control:disabled ~ .input-actions .input-increment {
   color: #6c757d !important;
 }
 
