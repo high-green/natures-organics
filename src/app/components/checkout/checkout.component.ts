@@ -20,7 +20,8 @@ export class CheckoutComponent implements OnInit {
   isLoading = false
   buttonMsg = 'Place Order'
   paymentOptionList = ['Bitcoin', 'Cashapp ', 'Apple Pay', 'Bank Transfer']
-  contactOptionList = ['Phone', 'SMS', 'Email', 'Whatsapp', 'Telegram']
+  contactOptionList1 = ['Phone', 'SMS', 'Email', 'Whatsapp', 'Telegram']
+    contactOptionList = ['Email']
   // Call/Text/email/telegram/immesage
   countryList = [
     'Afghanistan',
