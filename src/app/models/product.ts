@@ -436,8 +436,8 @@ export const PRODUCTS: Product[] = [
     thc: '25% THC',
     stars: 4,
     prices: [
-      { unit: Unit.one, amount: 210 },
-      { unit: Unit.two, amount: 550 },
+      { unit: Unit.one, amount: 150 },
+      { unit: Unit.two, amount: 280 },
       { unit: Unit.three, amount: 1000 },
       { unit: Unit.four, amount: 1500 },
     ],
@@ -494,10 +494,10 @@ export const PRODUCTS: Product[] = [
     thc: '51.2% THC',
     stars: 4,
     prices: [
-      { unit: Unit.one, amount: 210 },
-      { unit: Unit.two, amount: 362 },
-      { unit: Unit.three, amount: 982 },
-      { unit: Unit.four, amount: 1842 },
+      { unit: Unit.one, amount: 150 },
+      { unit: Unit.two, amount: 280 },
+      { unit: Unit.three, amount: 1000 },
+      { unit: Unit.four, amount: 1500 },
       { unit: Unit.five, amount: 3122 },
     ],
     description1:
@@ -773,8 +773,8 @@ export const PRODUCTS: Product[] = [
     thc: '',
     stars: 4,
     prices: [
-      { unit: Unit.one, amount: 210 },
-      { unit: Unit.two, amount: 550 },
+      { unit: Unit.one, amount: 150 },
+      { unit: Unit.two, amount: 280 },
       { unit: Unit.three, amount: 1000 },
       { unit: Unit.four, amount: 1500 },
     ],
@@ -792,8 +792,8 @@ export const PRODUCTS: Product[] = [
     thc: '32% THC',
     stars: 4,
     prices: [
-      { unit: Unit.one, amount: 210 },
-      { unit: Unit.two, amount: 550 },
+      { unit: Unit.one, amount: 150 },
+      { unit: Unit.two, amount: 280 },
       { unit: Unit.three, amount: 1000 },
       { unit: Unit.four, amount: 1500 },
     ],
