@@ -67,7 +67,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'thunder-bloody-mary',
     name: 'Thunder Bloody Mary',
-    photo: 'assets/img/products/t-bloody-mary.jpg',
+    photo: 'assets/img/products/t-bloody-mary-1.jpg',
     category: 'strain',
     thc: '21% THC',
     stars: 4,
@@ -290,7 +290,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'forbidden-fruit',
     name: 'Forbidden Fruit',
-    photo: 'assets/img/products/t-forbidden-fruit.jpg',
+    photo: 'assets/img/products/t-forbidden-fruit-1.jpg',
     category: 'strain',
     thc: '',
     stars: 4,
@@ -628,7 +628,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'berner-cookies',
     name: 'Berner Cookies',
-    photo: 'assets/img/products/berner.jpeg',
+    photo: 'assets/img/products/berner-1.jpeg',
     category: 'strain',
     thc: '',
     stars: 4,
@@ -688,7 +688,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'pineapple-express',
     name: 'Pineapple Express',
-    photo: 'assets/img/products/t-pineapple-express.jpg',
+    photo: 'assets/img/products/t-pineapple-express-1.jpg',
     category: 'strain',
     thc: '18% THC',
     stars: 4,
@@ -708,7 +708,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'plushberry',
     name: 'Plushberry',
-    photo: 'assets/img/products/t-plushberry.jpg',
+    photo: 'assets/img/products/t-plushberry-1.jpg',
     category: 'strain',
     thc: '17% THC',
     stars: 4,
@@ -748,7 +748,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'rainbow',
     name: 'Rainbow',
-    photo: 'assets/img/products/t-rainbow.jpg',
+    photo: 'assets/img/products/t-rainbow-1.jpg',
     category: 'strain',
     thc: '18% THC',
     stars: 4,
@@ -768,7 +768,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'runtz',
     name: 'Runtz',
-    photo: 'assets/img/products/runzz.jpg',
+    photo: 'assets/img/products/runzz-1.jpg',
     category: 'strain',
     thc: '',
     stars: 4,
@@ -864,7 +864,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'strawberry-diesel',
     name: 'Strawberry Diesel',
-    photo: 'assets/img/products/t-strewberry-diesel.jpg',
+    photo: 'assets/img/products/t-strewberry-diesel-1.jpg',
     category: 'strain',
     thc: '16% THC',
     stars: 4,
@@ -884,7 +884,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'white-widow',
     name: 'White Widow',
-    photo: 'assets/img/products/t-white-widow.jpg',
+    photo: 'assets/img/products/t-white-widow-1.jpg',
     category: 'strain',
     thc: '20% THC',
     stars: 4,
