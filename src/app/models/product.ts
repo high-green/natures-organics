@@ -290,7 +290,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'forbidden-fruit',
     name: 'Forbidden Fruit',
-    photo: 'assets/img/products/t-forbidden-fruit-1.jpg',
+    photo: 'assets/img/products/t-forbidden-fruit-1.png',
     category: 'strain',
     thc: '',
     stars: 4,
