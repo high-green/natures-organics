@@ -904,7 +904,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'cereal-milk',
     name: 'Cereal milk',
-    photo: 'assets/img/products/cereal-milk.jpg',
+    photo: 'assets/img/new/cereal-milk.jpg',
     category: 'strain',
     thc: '25% THC',
     stars: 4,
@@ -924,7 +924,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'apple-fritter',
     name: 'Apple Fritter',
-    photo: 'assets/img/products/apple-fritter.jpg',
+    photo: 'assets/img/new/apple-fritter.jpg',
     category: 'strain',
     thc: '27% THC',
     stars: 4,
@@ -944,7 +944,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'lemon-cherry-gelato',
     name: 'Lemon Cherry Gelato',
-    photo: 'assets/img/products/lemon-cherry.jpg',
+    photo: 'assets/img/new/lemon-cherry.jpg',
     category: 'strain',
     thc: '25% THC',
     stars: 4,
@@ -964,7 +964,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'wwedding-cake-010',
     name: 'Wedding Cake',
-    photo: 'assets/img/products/wedding-cake-n.WEBP',
+    photo: 'assets/img/new/wedding-cake-n.webp',
     category: 'strain',
     thc: '23% THC',
     stars: 4,
@@ -984,7 +984,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'ice-cream-010',
     name: 'Ice Cream',
-    photo: 'assets/img/products/ice-cream-n.jpg',
+    photo: 'assets/img/new/ice-cream-n.jpg',
     category: 'strain',
     thc: '24% THC',
     stars: 4,
