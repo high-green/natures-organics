@@ -964,7 +964,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'wwedding-cake-010',
     name: 'Wedding Cake',
-    photo: 'assets/img/products/wedding-cake.WEBP',
+    photo: 'assets/img/products/wedding-cake-n.WEBP',
     category: 'strain',
     thc: '23% THC',
     stars: 4,
@@ -984,7 +984,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'ice-cream-010',
     name: 'Ice Cream',
-    photo: 'assets/img/products/wedding-cake-n.jpg',
+    photo: 'assets/img/products/ice-cream-n.jpg',
     category: 'strain',
     thc: '24% THC',
     stars: 4,
