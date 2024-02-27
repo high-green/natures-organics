@@ -902,6 +902,106 @@ export const PRODUCTS: Product[] = [
     additionalInfo: '',
   } as Product,
   {
+    id: 'cereal-milk',
+    name: 'Cereal milk',
+    photo: 'assets/img/products/cereal-milk.jpg',
+    category: 'strain',
+    thc: '25% THC',
+    stars: 4,
+    prices: [
+      { unit: 'Half Ounce (15 grams)', amount: 105 },
+      { unit: 'Ounce (28 grams)', amount: 225 },
+      { unit: 'Quarter Pound (114 grams)', amount: 662 },
+      { unit: 'Half Pound (227 grams)', amount: 962 },
+      { unit: 'Pound (454 grams)', amount: 1650 },
+    ],
+    description1:
+      'Cereal milk(25%THC)  The strain has an unsurprisingly sweet, milky flavor with euphoric, energizing effects. Cereal Milk is commonly utilized by consumers seeking a lift from depression and/or stress. It’s also aesthetically pleasing,so if you’re looking to decorate your display cases with gorgeous, glistening sugary nugs, Cereal Milk is a great option.',
+    description2:
+      'Cereal milk(25%THC)  The strain has an unsurprisingly sweet, milky flavor with euphoric, energizing effects. Cereal Milk is commonly utilized by consumers seeking a lift from depression and/or stress. It’s also aesthetically pleasing,so if you’re looking to decorate your display cases with gorgeous, glistening sugary nugs, Cereal Milk is a great option.',
+    additionalInfo: '',
+  } as Product,
+  {
+    id: 'apple-fritter',
+    name: 'Apple Fritter',
+    photo: 'assets/img/products/apple-fritter.jpg',
+    category: 'strain',
+    thc: '27% THC',
+    stars: 4,
+    prices: [
+      { unit: 'Half Ounce (15 grams)', amount: 105 },
+      { unit: 'Ounce (28 grams)', amount: 225 },
+      { unit: 'Quarter Pound (114 grams)', amount: 662 },
+      { unit: 'Half Pound (227 grams)', amount: 962 },
+      { unit: 'Pound (454 grams)', amount: 1650 },
+    ],
+    description1:
+      'Apple Fritter (27%THC) Apple Fritter strain typically has a sweet, earthy scent and a cheesy-apple, pastry-inspired taste. It’s also noted for its 50/50 balance between Indica/Sativa with a  quick onset and strong cerebral effect.',
+    description2:
+      'Apple Fritter (27%THC) Apple Fritter strain typically has a sweet, earthy scent and a cheesy-apple, pastry-inspired taste. It’s also noted for its 50/50 balance between Indica/Sativa with a  quick onset and strong cerebral effect.',
+    additionalInfo: '',
+  } as Product,
+  {
+    id: 'lemon-cherry-gelato',
+    name: 'Lemon Cherry Gelato',
+    photo: 'assets/img/products/lemon-cherry.jpg',
+    category: 'strain',
+    thc: '25% THC',
+    stars: 4,
+    prices: [
+      { unit: 'Half Ounce (15 grams)', amount: 105 },
+      { unit: 'Ounce (28 grams)', amount: 225 },
+      { unit: 'Quarter Pound (114 grams)', amount: 662 },
+      { unit: 'Half Pound (227 grams)', amount: 962 },
+      { unit: 'Pound (454 grams)', amount: 1650 },
+    ],
+    description1:
+      'Lemon Cherry Gelato(25%THC) Lemon Cherry Gelato is recommended for more experienced consumers, often for its high THC content. For shops that tend to cater to high-dose consumers who prefer upbeat hybrids that simultaneously relax and energize, we recommend keeping your shelves stocked with this strain.',
+    description2:
+      'Lemon Cherry Gelato(25%THC) Lemon Cherry Gelato is recommended for more experienced consumers, often for its high THC content. For shops that tend to cater to high-dose consumers who prefer upbeat hybrids that simultaneously relax and energize, we recommend keeping your shelves stocked with this strain.',
+    additionalInfo: '',
+  } as Product,
+  {
+    id: 'wwedding-cake-010',
+    name: 'Wedding Cake',
+    photo: 'assets/img/products/wedding-cake.WEBP',
+    category: 'strain',
+    thc: '23% THC',
+    stars: 4,
+    prices: [
+      { unit: 'Half Ounce (15 grams)', amount: 105 },
+      { unit: 'Ounce (28 grams)', amount: 225 },
+      { unit: 'Quarter Pound (114 grams)', amount: 662 },
+      { unit: 'Half Pound (227 grams)', amount: 962 },
+      { unit: 'Pound (454 grams)', amount: 1650 },
+    ],
+    description1:
+      'Wedding Cake (23%THC) Wedding Cake is desirable for its calming body and mind effects as well as appetite stimulation. Most consumers report experiencing the munchies after consuming Wedding Cake, which means it’s a great strain to pair with a snack section or one to offer at a consumption cafe',
+    description2:
+      'Wedding Cake (23%THC) Wedding Cake is desirable for its calming body and mind effects as well as appetite stimulation. Most consumers report experiencing the munchies after consuming Wedding Cake, which means it’s a great strain to pair with a snack section or one to offer at a consumption cafe',
+    additionalInfo: '',
+  } as Product,
+  {
+    id: 'ice-cream-010',
+    name: 'Ice Cream',
+    photo: 'assets/img/products/wedding-cake-n.jpg',
+    category: 'strain',
+    thc: '24% THC',
+    stars: 4,
+    prices: [
+      { unit: 'Half Ounce (15 grams)', amount: 105 },
+      { unit: 'Ounce (28 grams)', amount: 225 },
+      { unit: 'Quarter Pound (114 grams)', amount: 662 },
+      { unit: 'Half Pound (227 grams)', amount: 962 },
+      { unit: 'Pound (454 grams)', amount: 1650 },
+    ],
+    description1:
+      'Ice cream cake(24%) Ice Cream Cake is an indica-dominant cross between Gelato #33 and the aforementioned Wedding Cake. The hybrid is popular among medical patients struggling with anxiety, insomnia, and chronic pain. A nighttime-use favorite, consumers will want to save Ice Cream Cake for chill time, so if your location has a section of products that are known for battling insomnia, consider recommending this strain as your latest yawn-inducing fit.',
+    description2:
+      'Ice cream cake(24%) Ice Cream Cake is an indica-dominant cross between Gelato #33 and the aforementioned Wedding Cake. The hybrid is popular among medical patients struggling with anxiety, insomnia, and chronic pain. A nighttime-use favorite, consumers will want to save Ice Cream Cake for chill time, so if your location has a section of products that are known for battling insomnia, consider recommending this strain as your latest yawn-inducing fit.',
+    additionalInfo: '',
+  } as Product,
+  {
     id: 'vaping-1',
     name: 'Vape Pen 1',
     photo: 'assets/img/products/vaping-1.jpg',
