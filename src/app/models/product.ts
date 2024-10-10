@@ -103,7 +103,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'blueberry',
     name: 'Blueberry',
-    photo: 'assets/img/products/blueberry.jpg',
+    photo: 'assets/img/new/blueberry.WEBP',
     category: 'strain',
     thc: '',
     stars: 4,
@@ -124,7 +124,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'blue-dream',
     name: 'Blue Dream',
-    photo: 'assets/img/products/blue.jpg',
+    photo: 'assets/img/new/Blue-Dream.WEBP',
     category: 'strain',
     thc: '19.3% THC',
     stars: 4,
@@ -290,7 +290,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'forbidden-fruit',
     name: 'Forbidden Fruit',
-    photo: 'assets/img/products/t-forbidden-fruit-1.png',
+    photo: 'assets/img/products/t-forbidden-fruit-1.jpg',
     category: 'strain',
     thc: '',
     stars: 4,
@@ -331,7 +331,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'god-gift',
     name: "God's Gift",
-    photo: 'assets/img/products/t-god-gift.jpg',
+    photo: 'assets/img/new/God-Gift.WEBP',
     category: 'strain',
     thc: '',
     stars: 4,
@@ -351,7 +351,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'golden-goat',
     name: 'Golden Goat',
-    photo: 'assets/img/products/t-golden-goat.jpg',
+    photo: 'assets/img/new/Golden-Goat.JPG',
     category: 'strain',
     thc: '19% THC',
     stars: 4,
@@ -371,7 +371,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'grand-daddy',
     name: 'Grand Daddy',
-    photo: 'assets/img/products/t-grand-dady.jpg',
+    photo: 'assets/img/new/grand-dady-purple.JPG',
     category: 'strain',
     thc: '18.5% THC',
     stars: 4,
@@ -391,7 +391,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'grape-ape',
     name: 'Grape Ape',
-    photo: 'assets/img/products/t-grape-ape.jpg',
+    photo: 'assets/img/new/Grape-Ape.JPG',
     category: 'strain',
     thc: '18.5% THC',
     stars: 4,
@@ -411,7 +411,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'green-crack',
     name: 'Green Crack',
-    photo: 'assets/img/products/t-green-crack.jpg',
+    photo: 'assets/img/new/Green-Crack.JPG',
     category: 'strain',
     thc: '17.5% THC',
     stars: 4,
@@ -568,7 +568,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'gorilla-glue-weed',
     name: 'Gorilla Glue Weed',
-    photo: 'assets/img/products/gorilla-glue-strain.jpg',
+    photo: 'assets/img/new/Gorilla-Glue.WEBP',
     category: 'strain',
     thc: '18% THC',
     stars: 4,
@@ -628,7 +628,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'berner-cookies',
     name: 'Berner Cookies',
-    photo: 'assets/img/products/berner-1.jpeg',
+    photo: 'assets/img/new/Berner-Cookies.JPG',
     category: 'strain',
     thc: '',
     stars: 4,
@@ -668,7 +668,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'pebbles',
     name: 'Pebbles',
-    photo: 'assets/img/products/t-pebbles.jpg',
+    photo: 'assets/img/new/Pebbles.JPG',
     category: 'strain',
     thc: '18% THC',
     stars: 4,
@@ -688,7 +688,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'pineapple-express',
     name: 'Pineapple Express',
-    photo: 'assets/img/products/t-pineapple-express-1.jpg',
+    photo: 'assets/img/new/Pineapple-Express.JPG',
     category: 'strain',
     thc: '18% THC',
     stars: 4,
@@ -748,7 +748,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'rainbow',
     name: 'Rainbow',
-    photo: 'assets/img/products/t-rainbow-1.jpg',
+    photo: 'assets/img/new/Rainbow.WEBP',
     category: 'strain',
     thc: '18% THC',
     stars: 4,
@@ -864,7 +864,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'strawberry-diesel',
     name: 'Strawberry Diesel',
-    photo: 'assets/img/products/t-strewberry-diesel-1.jpg',
+    photo: 'assets/img/new/Strawberry-Diesel.JPG',
     category: 'strain',
     thc: '16% THC',
     stars: 4,
@@ -884,7 +884,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'white-widow',
     name: 'White Widow',
-    photo: 'assets/img/products/t-white-widow-1.jpg',
+    photo: 'assets/img/new/White-Widow.JPG',
     category: 'strain',
     thc: '20% THC',
     stars: 4,
@@ -944,7 +944,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'lemon-cherry-gelato',
     name: 'Lemon Cherry Gelato',
-    photo: 'assets/img/new/lemon-cherry.jpg',
+    photo: 'assets/img/new/gelato.PNG',
     category: 'strain',
     thc: '25% THC',
     stars: 4,
